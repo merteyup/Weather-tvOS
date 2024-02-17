@@ -12,6 +12,11 @@
 		C4CE6C522B811A0F0013D422 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4CE6C502B811A0F0013D422 /* Main.storyboard */; };
 		C4CE6C542B811A100013D422 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4CE6C532B811A100013D422 /* Assets.xcassets */; };
 		C4CE6C572B811A100013D422 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4CE6C552B811A100013D422 /* LaunchScreen.storyboard */; };
+		C4CE6C642B812B610013D422 /* cloudy.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C4CE6C5F2B812B610013D422 /* cloudy.mp4 */; };
+		C4CE6C652B812B610013D422 /* snow.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C4CE6C602B812B610013D422 /* snow.mp4 */; };
+		C4CE6C662B812B610013D422 /* storm.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C4CE6C612B812B610013D422 /* storm.mp4 */; };
+		C4CE6C672B812B610013D422 /* rain.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C4CE6C622B812B610013D422 /* rain.mp4 */; };
+		C4CE6C682B812B610013D422 /* sun.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C4CE6C632B812B610013D422 /* sun.mp4 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +26,11 @@
 		C4CE6C512B811A0F0013D422 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C4CE6C532B811A100013D422 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C4CE6C562B811A100013D422 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C4CE6C5F2B812B610013D422 /* cloudy.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = cloudy.mp4; sourceTree = "<group>"; };
+		C4CE6C602B812B610013D422 /* snow.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = snow.mp4; sourceTree = "<group>"; };
+		C4CE6C612B812B610013D422 /* storm.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = storm.mp4; sourceTree = "<group>"; };
+		C4CE6C622B812B610013D422 /* rain.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = rain.mp4; sourceTree = "<group>"; };
+		C4CE6C632B812B610013D422 /* sun.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = sun.mp4; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,10 +66,23 @@
 				C4CE6C4C2B811A0F0013D422 /* AppDelegate.swift */,
 				C4CE6C4E2B811A0F0013D422 /* FirstViewController.swift */,
 				C4CE6C502B811A0F0013D422 /* Main.storyboard */,
-				C4CE6C532B811A100013D422 /* Assets.xcassets */,
 				C4CE6C552B811A100013D422 /* LaunchScreen.storyboard */,
+				C4CE6C532B811A100013D422 /* Assets.xcassets */,
+				C4CE6C692B812B7D0013D422 /* Videos */,
 			);
 			path = "weather-tvOS";
+			sourceTree = "<group>";
+		};
+		C4CE6C692B812B7D0013D422 /* Videos */ = {
+			isa = PBXGroup;
+			children = (
+				C4CE6C5F2B812B610013D422 /* cloudy.mp4 */,
+				C4CE6C622B812B610013D422 /* rain.mp4 */,
+				C4CE6C602B812B610013D422 /* snow.mp4 */,
+				C4CE6C612B812B610013D422 /* storm.mp4 */,
+				C4CE6C632B812B610013D422 /* sun.mp4 */,
+			);
+			path = Videos;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -121,7 +144,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				C4CE6C572B811A100013D422 /* LaunchScreen.storyboard in Resources */,
+				C4CE6C662B812B610013D422 /* storm.mp4 in Resources */,
+				C4CE6C642B812B610013D422 /* cloudy.mp4 in Resources */,
+				C4CE6C672B812B610013D422 /* rain.mp4 in Resources */,
+				C4CE6C682B812B610013D422 /* sun.mp4 in Resources */,
 				C4CE6C542B811A100013D422 /* Assets.xcassets in Resources */,
+				C4CE6C652B812B610013D422 /* snow.mp4 in Resources */,
 				C4CE6C522B811A0F0013D422 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

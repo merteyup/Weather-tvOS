@@ -46,7 +46,15 @@ class SearchTableViewController: UITableViewController {
         return cell
     }
     
-
+    
+    // MARK: - Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let indexPath = tableView.indexPathForSelectedRow {
+            let weatherObject = weatherArray[indexPath.row]
+            let detailVC = segue.destination as! DetailViewController
+            detailVC.weatherObject = weatherObject
+        }
+    }
     
 }
 

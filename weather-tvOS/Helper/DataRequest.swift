@@ -1,6 +1,6 @@
 //
 //  DataRequest.swift
-//  Weather
+//  weather-tvOS
 //
 //  Created by Brian Advent on 05.01.19.
 //  Copyright © 2019 Brian Advent. All rights reserved.

@@ -8,11 +8,16 @@
 import UIKit
 
 class DetailViewController: UIViewController {
-
+    
+    // MARK: - Outlets
+    @IBOutlet weak var summaryLabel: UILabel!
+    @IBOutlet weak var temperatureLabel: UILabel!
+    @IBOutlet weak var conditionImageView: UIImageView!
+    
+    // MARK: - Statements
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
 
 }

@@ -8,7 +8,10 @@
 import UIKit
 
 class SearchTableViewController: UITableViewController {
-
+    
+    // MARK: - Outlets
+    @IBOutlet weak var searchTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

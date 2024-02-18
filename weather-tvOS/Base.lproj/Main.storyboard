@@ -57,6 +57,9 @@
                                             <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
                                             <state key="normal" title="Button"/>
                                             <buttonConfiguration key="configuration" style="plain" title="Tuesday"/>
+                                            <connections>
+                                                <action selector="nextDayAction:" destination="Utg-fX-xUH" eventType="primaryActionTriggered" id="zhf-IQ-JGy"/>
+                                            </connections>
                                         </button>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UrN-cS-lzd">
                                             <rect key="frame" x="1102" y="83" width="4" height="342"/>
@@ -83,6 +86,14 @@
                         <viewLayoutGuide key="safeArea" id="U4E-Nb-Fx9"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Your Location" id="PrK-Wx-jjW"/>
+                    <connections>
+                        <outlet property="conditionImageView" destination="S0V-8P-ZSI" id="Mr0-t7-pCG"/>
+                        <outlet property="dateLabel" destination="Onq-tN-WSw" id="NbT-5L-9zg"/>
+                        <outlet property="locationLabel" destination="FQg-qn-jDg" id="yVQ-I4-bFa"/>
+                        <outlet property="nextDayButton" destination="GnB-Qq-KYF" id="b9B-6J-CoK"/>
+                        <outlet property="summaryLabel" destination="fXo-Ve-BUe" id="D5e-O3-8yh"/>
+                        <outlet property="temperatureLabel" destination="XdF-Et-U7l" id="jcs-Ld-RAp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gbn-hf-ChH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -127,6 +138,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="City Search" id="GGb-4y-PBj"/>
                     <connections>
+                        <outlet property="searchTextField" destination="85S-z4-kcP" id="R4J-7Z-mhq"/>
                         <outlet property="tabBarObservedScrollView" destination="udB-DV-EV4" id="uJG-QT-j8r"/>
                     </connections>
                 </tableViewController>
@@ -167,6 +179,11 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="PsF-Bu-4Wb"/>
                     </view>
+                    <connections>
+                        <outlet property="conditionImageView" destination="3v2-UQ-J0A" id="QDD-JA-K9C"/>
+                        <outlet property="summaryLabel" destination="eaa-Yk-xvu" id="43A-1a-pNW"/>
+                        <outlet property="temperatureLabel" destination="mcG-xk-PDJ" id="Wi0-AU-pS5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Taj-Bv-vJc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

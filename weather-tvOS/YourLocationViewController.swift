@@ -82,6 +82,32 @@ class YourLocationViewController: UIViewController {
         
     }
     
+    // MARK: - UI Update
+    func updateUI (index: Int) {
+        let weatherObject = weatherArray[index]
+        
+        DispatchQueue.main.async { [weak self] in
+            guard let icon = Icon(rawValue: weatherObject.condition_name) else { return }
+            self?.temperatureLabel.text = "\(weatherObject.temp_max) C°"
+            self?.summaryLabel.text = weatherObject.condition_desc
+            self?.conditionImageView.image = UIImage(named: icon.rawValue)
+            self?.setBackgroundVideo(withWeatherIcon: icon)
+        }
+    }
+    
+    func setBackgroundVideo(withWeatherIcon icon: Icon) {
+        NotificationCenter.default.removeObserver(self, 
+                                                  name: .AVPlayerItemDidPlayToEndTime,
+                                                  object: avPlayer.currentItem)
+        
+        avPlayer.replaceCurrentItem(with: preparePlayerItem(withIcon: icon))
+        
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(playerItemDidReachEnd(notification:)),
+                                               name: .AVPlayerItemDidPlayToEndTime,
+                                               object: avPlayer.currentItem)
+    }
+    
 }
 
 // MARK: - Extension CLLocationManagerDelegate
@@ -148,7 +174,7 @@ extension YourLocationViewController {
             case .success(let array):
                 guard let forecastArray = array.first?.forecast else { return }
                 self?.weatherArray = forecastArray
-                print(forecastArray)
+                self?.updateUI(index: index)
             case .failure:
                 print("Failed to fetch weather data")
             }

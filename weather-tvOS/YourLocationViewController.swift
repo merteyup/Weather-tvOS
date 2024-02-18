@@ -88,7 +88,9 @@ class YourLocationViewController: UIViewController {
         
         DispatchQueue.main.async { [weak self] in
             guard let icon = Icon(rawValue: weatherObject.condition_name) else { return }
-            self?.temperatureLabel.text = "\(Int(weatherObject.temp_max)) C°"
+            guard let temperature = self?.convertToCelsius(from: weatherObject.temp_max) else { return }
+
+            self?.temperatureLabel.text = "\(Int(temperature)) C°"
             self?.summaryLabel.text = weatherObject.condition_desc
             self?.conditionImageView.image = UIImage(named: icon.rawValue)
             self?.setBackgroundVideo(withWeatherIcon: icon)
@@ -181,4 +183,13 @@ extension YourLocationViewController {
         }
     }
     
+}
+
+// MARK: - Extension Measurement
+extension YourLocationViewController {
+    func convertToCelsius(from: Float) -> Float {
+        let fahrenheit = Measurement(value: Double(from), unit: UnitTemperature.fahrenheit)
+        let celsius = fahrenheit.converted(to: .celsius).value
+        return Float(celsius)
+    }
 }

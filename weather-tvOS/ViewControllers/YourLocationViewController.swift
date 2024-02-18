@@ -204,12 +204,3 @@ extension YourLocationViewController {
     }
     
 }
-
-// MARK: - Extension Measurement
-public extension UIViewController {
-    func convertToCelsius(from: Float) -> Float {
-        let fahrenheit = Measurement(value: Double(from), unit: UnitTemperature.fahrenheit)
-        let celsius = fahrenheit.converted(to: .celsius).value
-        return Float(celsius)
-    }
-}

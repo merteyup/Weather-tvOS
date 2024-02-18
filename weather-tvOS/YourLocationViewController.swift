@@ -85,19 +85,26 @@ class YourLocationViewController: UIViewController {
 extension YourLocationViewController: CLLocationManagerDelegate {
     
     func setUpLocationServices() {
-        if CLLocationManager.locationServicesEnabled() {
-            locationManger.delegate = self
-            switch locationManger.authorizationStatus {
-            case .restricted, .denied:
-                locationManger.requestWhenInUseAuthorization()
-            case .notDetermined:
-                locationManger.requestWhenInUseAuthorization()
-            case .authorizedAlways, .authorizedWhenInUse:
-                locationManger.requestLocation()
-            default:
-                print()
-            }
+        locationManger.delegate = self
+        
+        let authorizationStatus: CLAuthorizationStatus
+        if #available(iOS 14, *) {
+            authorizationStatus = locationManger.authorizationStatus
+        } else {
+            authorizationStatus = CLLocationManager.authorizationStatus()
         }
+        
+        switch authorizationStatus {
+        case .restricted, .denied:
+            locationManger.requestWhenInUseAuthorization()
+        case .notDetermined:
+            locationManger.requestWhenInUseAuthorization()
+        case .authorizedAlways, .authorizedWhenInUse:
+            locationManger.requestLocation()
+        default:
+            print()
+        }
+        
     }
     
     func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {

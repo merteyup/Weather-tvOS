@@ -30,6 +30,7 @@
 		C43B139E2B8248C400AC3106 /* Forecast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Forecast.swift; sourceTree = "<group>"; };
 		C43B13A02B82497600AC3106 /* DataRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataRequest.swift; sourceTree = "<group>"; };
 		C43B13A22B82498100AC3106 /* WeatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherData.swift; sourceTree = "<group>"; };
+		C43B13A42B824B6300AC3106 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		C4A449BB2B82137C00BF9C1A /* SearchTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
 		C4A449BD2B8213A900BF9C1A /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		C4CE6C492B811A0F0013D422 /* weather-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "weather-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -75,6 +76,7 @@
 		C4CE6C4B2B811A0F0013D422 /* weather-tvOS */ = {
 			isa = PBXGroup;
 			children = (
+				C43B13A42B824B6300AC3106 /* Info.plist */,
 				C4CE6C4C2B811A0F0013D422 /* AppDelegate.swift */,
 				C43B13A02B82497600AC3106 /* DataRequest.swift */,
 				C43B139C2B82269B00AC3106 /* Icon.swift */,
@@ -340,7 +342,8 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4CX3G85ALP;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Application needs to reach your location to show you correct weather forecast";
+				INFOPLIST_FILE = "weather-tvOS/Info.plist";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = NO;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UIUserInterfaceStyle = Automatic;
@@ -366,7 +369,8 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4CX3G85ALP;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Application needs to reach your location to show you correct weather forecast";
+				INFOPLIST_FILE = "weather-tvOS/Info.plist";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = NO;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UIUserInterfaceStyle = Automatic;

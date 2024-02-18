@@ -88,7 +88,7 @@ class YourLocationViewController: UIViewController {
         
         DispatchQueue.main.async { [weak self] in
             guard let icon = Icon(rawValue: weatherObject.condition_name) else { return }
-            self?.temperatureLabel.text = "\(weatherObject.temp_max) C°"
+            self?.temperatureLabel.text = "\(Int(weatherObject.temp_max)) C°"
             self?.summaryLabel.text = weatherObject.condition_desc
             self?.conditionImageView.image = UIImage(named: icon.rawValue)
             self?.setBackgroundVideo(withWeatherIcon: icon)

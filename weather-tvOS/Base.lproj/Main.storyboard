@@ -145,7 +145,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="Fwk-Yb-Ra3" kind="showDetail" trigger="accessoryAction" id="uCL-mL-ZPy"/>
+                                    <segue destination="Fwk-Yb-Ra3" kind="showDetail" id="RGF-Xf-AJu"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -176,21 +176,21 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Summary" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4l3-2X-o0C">
-                                <rect key="frame" x="68" y="62" width="712" height="103"/>
+                                <rect key="frame" x="146" y="207" width="712" height="103"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="54 °F" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BBw-kn-0it">
-                                <rect key="frame" x="68" y="173" width="250" height="109"/>
+                                <rect key="frame" x="146" y="318" width="250" height="109"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="80"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="clear-day" translatesAutoresizingMaskIntoConstraints="NO" id="4HI-RV-ZD6">
-                                <rect key="frame" x="1008" y="62" width="200" height="200"/>
+                                <rect key="frame" x="902" y="207" width="200" height="200"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -199,7 +199,7 @@
                     <connections>
                         <outlet property="conditionImageView" destination="4HI-RV-ZD6" id="tXd-2h-OwV"/>
                         <outlet property="summaryLabel" destination="4l3-2X-o0C" id="N6G-xE-5T0"/>
-                        <outlet property="tempLabel" destination="BBw-kn-0it" id="bJn-sj-yVx"/>
+                        <outlet property="temperatureLabel" destination="BBw-kn-0it" id="0ug-iC-taB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XAF-14-XsU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

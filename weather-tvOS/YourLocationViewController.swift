@@ -71,12 +71,12 @@ class YourLocationViewController: UIViewController {
         let item = AVPlayerItem(url: url)
         return item
     }
-        
+    
     @objc func playerItemDidReachEnd(notification: Notification) {
         guard let playerItem = notification.object as? AVPlayerItem else { return }
         playerItem.seek(to: .zero, completionHandler: nil)
     }
-  
+    
     // MARK: - Actions
     @IBAction func nextDayAction(_ sender: UIButton) {
         

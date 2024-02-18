@@ -91,7 +91,7 @@
         <!--City Search-->
         <scene sceneID="eeW-sp-RSa">
             <objects>
-                <tableViewController clearsSelectionOnViewWillAppear="NO" id="aCr-81-d6a" sceneMemberID="viewController">
+                <tableViewController clearsSelectionOnViewWillAppear="NO" id="aCr-81-d6a" customClass="SearchTableViewController" customModule="weather_tvOS" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" sectionHeaderHeight="66" sectionFooterHeight="66" id="udB-DV-EV4">
                         <rect key="frame" x="0.0" y="0.0" width="634" height="1080"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -134,10 +134,10 @@
             </objects>
             <point key="canvasLocation" x="160" y="1478"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="ko0-kI-1c0">
             <objects>
-                <viewController id="gcg-jM-ytU" sceneMemberID="viewController">
+                <viewController id="gcg-jM-ytU" customClass="DetailViewController" customModule="weather_tvOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="bv6-WQ-duB"/>
                         <viewControllerLayoutGuide type="bottom" id="Ib3-Gd-Qh8"/>

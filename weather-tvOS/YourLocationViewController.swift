@@ -24,6 +24,18 @@ class YourLocationViewController: UIViewController {
     // MARK: - Statements
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        initVideoBackground()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        avPlayer.play()
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        avPlayer.pause()
     }
     
     // MARK: - Functions

@@ -10,7 +10,7 @@
         <!--Your Location-->
         <scene sceneID="hNO-kK-Px8">
             <objects>
-                <viewController id="Utg-fX-xUH" customClass="FirstViewController" customModule="weather_tvOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Utg-fX-xUH" customClass="YourLocationViewController" customModule="weather_tvOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="pfP-Cr-dOM"/>
                         <viewControllerLayoutGuide type="bottom" id="mz1-yn-fLW"/>

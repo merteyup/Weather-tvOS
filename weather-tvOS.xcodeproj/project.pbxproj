@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C4CE6C4D2B811A0F0013D422 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CE6C4C2B811A0F0013D422 /* AppDelegate.swift */; };
-		C4CE6C4F2B811A0F0013D422 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CE6C4E2B811A0F0013D422 /* FirstViewController.swift */; };
+		C4CE6C4F2B811A0F0013D422 /* YourLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CE6C4E2B811A0F0013D422 /* YourLocationViewController.swift */; };
 		C4CE6C522B811A0F0013D422 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4CE6C502B811A0F0013D422 /* Main.storyboard */; };
 		C4CE6C542B811A100013D422 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4CE6C532B811A100013D422 /* Assets.xcassets */; };
 		C4CE6C572B811A100013D422 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4CE6C552B811A100013D422 /* LaunchScreen.storyboard */; };
@@ -22,7 +22,7 @@
 /* Begin PBXFileReference section */
 		C4CE6C492B811A0F0013D422 /* weather-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "weather-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4CE6C4C2B811A0F0013D422 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C4CE6C4E2B811A0F0013D422 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		C4CE6C4E2B811A0F0013D422 /* YourLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourLocationViewController.swift; sourceTree = "<group>"; };
 		C4CE6C512B811A0F0013D422 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C4CE6C532B811A100013D422 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C4CE6C562B811A100013D422 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };

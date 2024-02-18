@@ -1,5 +1,5 @@
 //
-//  FirstViewController.swift
+//  YourLocationViewController.swift
 //  weather-tvOS
 //
 //  Created by Eyüp Mert on 17.02.2024.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class FirstViewController: UIViewController {
+class YourLocationViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

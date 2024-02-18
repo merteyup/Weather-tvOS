@@ -27,6 +27,9 @@ class YourLocationViewController: UIViewController {
     var locationManger = CLLocationManager()
     var currentLocation: CLLocation?
     
+    // MARK: - Weather Properties
+    var weatherArray = [Forecast]()
+    
     // MARK: - Statements
     override func viewDidLoad() {
         super.viewDidLoad()

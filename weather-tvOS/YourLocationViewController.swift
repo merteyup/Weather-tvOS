@@ -7,6 +7,7 @@
 
 import UIKit
 import AVFoundation
+import CoreLocation
 
 class YourLocationViewController: UIViewController {
     
@@ -18,13 +19,18 @@ class YourLocationViewController: UIViewController {
     @IBOutlet weak var summaryLabel: UILabel!
     @IBOutlet weak var nextDayButton: UIButton!
     
+    // MARK: - Variables
     var avPlayer: AVPlayer!
     var avPlayerLayer: AVPlayerLayer!
+    
+    // MARK: - Location Properties
+    var locationManger = CLLocationManager()
+    var currentLocation: CLLocation?
     
     // MARK: - Statements
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        setUpLocationServices()
         initVideoBackground()
     }
     
@@ -75,3 +81,23 @@ class YourLocationViewController: UIViewController {
     
 }
 
+// MARK: - Extension CLLocationManagerDelegate
+extension YourLocationViewController: CLLocationManagerDelegate {
+    
+    func setUpLocationServices() {
+        if CLLocationManager.locationServicesEnabled() {
+            locationManger.delegate = self
+            switch locationManger.authorizationStatus {
+            case .restricted, .denied:
+                locationManger.requestWhenInUseAuthorization()
+            case .notDetermined:
+                locationManger.requestWhenInUseAuthorization()
+            case .authorizedAlways, .authorizedWhenInUse:
+                locationManger.requestLocation()
+            default:
+                print()
+            }
+        }
+    }
+    
+}

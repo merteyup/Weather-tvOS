@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item 1-->
+        <!--Your Location-->
         <scene sceneID="hNO-kK-Px8">
             <objects>
                 <viewController id="Utg-fX-xUH" customClass="FirstViewController" customModule="weather_tvOS" customModuleProvider="target" sceneMemberID="viewController">
@@ -82,13 +82,13 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="U4E-Nb-Fx9"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="PrK-Wx-jjW"/>
+                    <tabBarItem key="tabBarItem" title="Your Location" id="PrK-Wx-jjW"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gbn-hf-ChH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="160" y="-2856"/>
         </scene>
-        <!--Root View Controller-->
+        <!--City Search-->
         <scene sceneID="eeW-sp-RSa">
             <objects>
                 <tableViewController clearsSelectionOnViewWillAppear="NO" id="aCr-81-d6a" sceneMemberID="viewController">
@@ -113,7 +113,7 @@
                             <outlet property="delegate" destination="aCr-81-d6a" id="gRw-RC-L1Y"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="GGb-4y-PBj"/>
+                    <navigationItem key="navigationItem" title="City Search" id="GGb-4y-PBj"/>
                     <connections>
                         <outlet property="tabBarObservedScrollView" destination="udB-DV-EV4" id="uJG-QT-j8r"/>
                     </connections>
@@ -155,11 +155,11 @@
             </objects>
             <point key="canvasLocation" x="160" y="133"/>
         </scene>
-        <!--Item-->
+        <!--City Search-->
         <scene sceneID="rT6-aR-m3D">
             <objects>
                 <splitViewController allowDoubleColumnStyle="YES" id="4dP-mS-m86" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="aVb-ot-uyr"/>
+                    <tabBarItem key="tabBarItem" title="City Search" id="aVb-ot-uyr"/>
                     <connections>
                         <segue destination="XfO-TB-far" kind="relationship" relationship="masterViewController" id="UXb-8R-n8y"/>
                     </connections>

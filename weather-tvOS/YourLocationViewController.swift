@@ -103,7 +103,7 @@ extension YourLocationViewController: CLLocationManagerDelegate {
         case .notDetermined:
             locationManger.requestWhenInUseAuthorization()
         case .authorizedAlways, .authorizedWhenInUse:
-            locationManger.requestLocation()
+            print()
         default:
             print()
         }
@@ -124,6 +124,7 @@ extension YourLocationViewController: CLLocationManagerDelegate {
         manager.stopUpdatingLocation()
         guard let locationObject = locations.first else {return}
         currentLocation = locationObject
+        getWeatherForLocation(location: locationObject, andForeCastIndex: 0)
         let geoCoder = CLGeocoder()
         geoCoder.reverseGeocodeLocation(locationObject) { placemarks, error in
             if error == nil {
@@ -134,4 +135,24 @@ extension YourLocationViewController: CLLocationManagerDelegate {
             }
         }
     }
+}
+
+// MARK: - Weather
+extension YourLocationViewController {
+    
+    func getWeatherForLocation(location: CLLocation, andForeCastIndex index: Int) {
+        let weatherDataRequest = DataRequest<WeatherData>(location: location)
+        weatherDataRequest.getData { [weak self] dataResult in
+            
+            switch dataResult {
+            case .success(let array):
+                guard let forecastArray = array.first?.forecast else { return }
+                self?.weatherArray = forecastArray
+                print(forecastArray)
+            case .failure:
+                print("Failed to fetch weather data")
+            }
+        }
+    }
+    
 }

@@ -28,7 +28,7 @@ class YourLocationViewController: UIViewController {
     
     // MARK: - Functions
     func initVideoBackground() {
-        avPlayer = AVPlayer(playerItem: nil)
+        avPlayer = AVPlayer(playerItem: preparePlayerItem(withIcon: Icon.sun))
         avPlayerLayer = AVPlayerLayer(player: avPlayer)
         avPlayerLayer.videoGravity = .resizeAspectFill
         avPlayerLayer.frame = view.layer.bounds
@@ -38,6 +38,22 @@ class YourLocationViewController: UIViewController {
         
         view.backgroundColor = .clear
         view.layer.insertSublayer(avPlayerLayer, at: 0)
+        
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(playerItemDidReachEnd(notification:)),
+                                               name: NSNotification.Name.AVPlayerItemDidPlayToEndTime,
+                                               object: avPlayer.currentItem)
+    }
+    
+    func preparePlayerItem(withIcon icon: Icon) -> AVPlayerItem? {
+        guard let url = Bundle.main.url(forResource: icon.rawValue, withExtension: "mp4") else { return nil }
+        let item = AVPlayerItem(url: url)
+        return item
+    }
+        
+    @objc func playerItemDidReachEnd(notification: Notification) {
+        guard let playerItem = notification.object as? AVPlayerItem else { return }
+        playerItem.seek(to: .zero, completionHandler: nil)
     }
   
     // MARK: - Actions

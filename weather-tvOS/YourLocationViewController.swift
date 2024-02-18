@@ -29,12 +29,15 @@ class YourLocationViewController: UIViewController {
     
     // MARK: - Weather Properties
     var weatherArray = [Forecast]()
+    var maximumForecastDay = 5
+    var numberOfDayChanges = 0
     
     // MARK: - Statements
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpLocationServices()
         initVideoBackground()
+        updateDate()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -77,9 +80,26 @@ class YourLocationViewController: UIViewController {
         playerItem.seek(to: .zero, completionHandler: nil)
     }
     
+    func updateDate() {
+        guard let selectedDate = Calendar.current.date(byAdding: .day, value: numberOfDayChanges, to: Date()) else { return }
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MMMM, dd, yyyy"
+        let date = dateFormatter.string(from: selectedDate)
+        dateLabel.text = date
+        dateFormatter.dateFormat = "EEEE"
+        nextDayButton.setTitle(dateFormatter.string(from: selectedDate), for: .normal)
+    }
+    
     // MARK: - Actions
     @IBAction func nextDayAction(_ sender: UIButton) {
-        
+        if numberOfDayChanges < maximumForecastDay {
+            numberOfDayChanges += 1
+            updateUI(index: numberOfDayChanges)
+        } else {
+            numberOfDayChanges = 0
+            updateUI(index: numberOfDayChanges)
+        }
+        updateDate()
     }
     
     // MARK: - UI Update

@@ -14,10 +14,26 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var temperatureLabel: UILabel!
     @IBOutlet weak var conditionImageView: UIImageView!
     
+    // MARK: - Variable
+    var weatherObject: Forecast! {
+        didSet{
+            configureView()
+        }
+    }
+    
     // MARK: - Statements
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        configureView()
     }
-
+    
+    // MARK: - Functions
+    func configureView() {
+        if let summaryLabel = self.summaryLabel {
+            summaryLabel.text = weatherObject.condition_desc
+            let temperature = convertToCelsius(from: weatherObject.temp_max)
+            temperatureLabel.text = "\(Int(temperature)) C°"
+            conditionImageView.image = UIImage(named: weatherObject.condition_name)
+        }
+    }
 }

@@ -1,6 +1,6 @@
 //
 //  Icon.swift
-//  Weather
+//  weather-tvOS
 //
 //  Created by Brian Advent on 23/03/2017.
 //  Copyright © 2017 Brian Advent. All rights reserved.

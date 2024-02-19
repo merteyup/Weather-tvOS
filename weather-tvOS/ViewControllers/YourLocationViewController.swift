@@ -32,9 +32,13 @@ class YourLocationViewController: UIViewController {
     var maximumForecastDay = 5
     var numberOfDayChanges = 0
     
+    // MARK: - Peer Network Properties
+    var peerService = PeerNetwork()
+    
     // MARK: - Statements
     override func viewDidLoad() {
         super.viewDidLoad()
+        peerService.delegate = self
         setUpLocationServices()
         initVideoBackground()
         updateDate()
@@ -203,4 +207,23 @@ extension YourLocationViewController {
         }
     }
     
+}
+
+// MARK: - PeerNetworkDelegate
+extension YourLocationViewController: PeerNetworkDelegate {
+    func dataChanged(manager: PeerNetwork, dataPackage: Data) {
+        guard let placeMarkObject = try? NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(dataPackage) as? CLPlacemark else { return }
+        guard let location = placeMarkObject.location else { return }
+        guard let cityName = placeMarkObject.name else { return }
+        
+        DispatchQueue.main.async {  [ weak self ] in
+            self?.locationLabel.text = cityName
+        }
+        
+        getWeatherForLocation(location: location, andForeCastIndex: 0)
+    }
+    
+    func sendDataDidFailed(error: Error) {
+        showMessage("Error", "\(error.localizedDescription)")
+    }
 }

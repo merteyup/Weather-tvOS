@@ -11,6 +11,7 @@ import MultipeerConnectivity
 
 protocol PeerNetworkDelegate : AnyObject {
     func dataChanged(manager:PeerNetwork, dataPackage:Data)
+    func sendDataDidFailed(error: Error)
 }
 
 class PeerNetwork : NSObject {
@@ -49,7 +50,7 @@ class PeerNetwork : NSObject {
             do {
                 try session.send(dataPackage, toPeers: session.connectedPeers, with: .reliable)
             } catch {
-                print(error.localizedDescription)
+                delegate?.sendDataDidFailed(error: error)
             }
         }
     }

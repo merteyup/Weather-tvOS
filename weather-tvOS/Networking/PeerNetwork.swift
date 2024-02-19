@@ -21,20 +21,37 @@ class PeerNetwork : NSObject {
     private let serviceAdvertiser: MCNearbyServiceAdvertiser
     private let serviceBrowser: MCNearbyServiceBrowser
     
-    lazy var session:MCSession = {
+    lazy var session: MCSession = {
         let session = MCSession(peer: peerID, securityIdentity: nil, encryptionPreference: .required)
         session.delegate = self
         return session
     }()
     
     override init() {
+        serviceAdvertiser = MCNearbyServiceAdvertiser(peer: peerID, discoveryInfo: nil, serviceType: serviceType)
+        serviceBrowser = MCNearbyServiceBrowser(peer: peerID, serviceType: serviceType)
+        super.init()
+        
+        serviceAdvertiser.delegate = self
+        serviceAdvertiser.startAdvertisingPeer()
+        
+        serviceBrowser.delegate = self
+        serviceBrowser.startBrowsingForPeers()
     }
     
     deinit {
+        serviceAdvertiser.stopAdvertisingPeer()
+        serviceBrowser.stopBrowsingForPeers()
     }
     
-    func send (dataPackage:Data) {
-        
+    func send(dataPackage: Data) {
+        if session.connectedPeers.count > 0 {
+            do {
+                try session.send(dataPackage, toPeers: session.connectedPeers, with: .reliable)
+            } catch {
+                print(error.localizedDescription)
+            }
+        }
     }
     
 }
@@ -46,6 +63,8 @@ extension PeerNetwork : MCNearbyServiceAdvertiserDelegate {
     
     func advertiser(_ advertiser: MCNearbyServiceAdvertiser, didReceiveInvitationFromPeer peerID: MCPeerID, withContext context: Data?, invitationHandler: @escaping (Bool, MCSession?) -> Void) {
         print("Did Receive Invitation from Peer: \(peerID)")
+        
+        invitationHandler(true, session)
     }
 }
 
@@ -57,6 +76,7 @@ extension PeerNetwork : MCNearbyServiceBrowserDelegate {
     func browser(_ browser: MCNearbyServiceBrowser, foundPeer peerID: MCPeerID, withDiscoveryInfo info: [String : String]?) {
         print("found peer \(peerID)")
         print("invite peer \(peerID)")
+        browser.invitePeer(peerID, to: session, withContext: nil, timeout: 10)
        
     }
     
@@ -73,6 +93,8 @@ extension PeerNetwork : MCSessionDelegate {
     
     func session(_ session: MCSession, didReceive data: Data, fromPeer peerID: MCPeerID) {
         print("Data: \(data)")
+        
+        delegate?.dataChanged(manager: self, dataPackage: data)
     }
     
     func session(_ session: MCSession, didReceive stream: InputStream, withName streamName: String, fromPeer peerID: MCPeerID) {

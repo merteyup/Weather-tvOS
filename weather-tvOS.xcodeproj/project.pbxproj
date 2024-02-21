@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		C42A51002B831E0D002CBA68 /* PeerNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42A50FF2B831E0D002CBA68 /* PeerNetwork.swift */; };
 		C42A51022B832169002CBA68 /* UIViewController+ShowAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42A51012B832169002CBA68 /* UIViewController+ShowAlert.swift */; };
+		C42A510A2B86880A002CBA68 /* TVServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C42A51092B86880A002CBA68 /* TVServices.framework */; };
+		C42A510D2B86880A002CBA68 /* ContentProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42A510C2B86880A002CBA68 /* ContentProvider.swift */; };
+		C42A51112B86880A002CBA68 /* TopShelf.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = C42A51072B86880A002CBA68 /* TopShelf.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		C42A51182B868835002CBA68 /* yourLocation.xlsr in Resources */ = {isa = PBXBuildFile; fileRef = C42A51162B868835002CBA68 /* yourLocation.xlsr */; };
+		C42A51192B868835002CBA68 /* citySearch.xlsr in Resources */ = {isa = PBXBuildFile; fileRef = C42A51172B868835002CBA68 /* citySearch.xlsr */; };
 		C43B139D2B82269B00AC3106 /* Icon.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43B139C2B82269B00AC3106 /* Icon.swift */; };
 		C43B139F2B8248C400AC3106 /* Forecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43B139E2B8248C400AC3106 /* Forecast.swift */; };
 		C43B13A12B82497600AC3106 /* DataRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43B13A02B82497600AC3106 /* DataRequest.swift */; };
@@ -28,9 +33,39 @@
 		C4CE6C682B812B610013D422 /* sun.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C4CE6C632B812B610013D422 /* sun.mp4 */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		C42A510F2B86880A002CBA68 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C4CE6C412B811A0F0013D422 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C42A51062B86880A002CBA68;
+			remoteInfo = TopShelf;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C42A51122B86880A002CBA68 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				C42A51112B86880A002CBA68 /* TopShelf.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		C42A50FF2B831E0D002CBA68 /* PeerNetwork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeerNetwork.swift; sourceTree = "<group>"; };
 		C42A51012B832169002CBA68 /* UIViewController+ShowAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+ShowAlert.swift"; sourceTree = "<group>"; };
+		C42A51072B86880A002CBA68 /* TopShelf.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = TopShelf.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		C42A51092B86880A002CBA68 /* TVServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TVServices.framework; path = System/Library/Frameworks/TVServices.framework; sourceTree = SDKROOT; };
+		C42A510C2B86880A002CBA68 /* ContentProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentProvider.swift; sourceTree = "<group>"; };
+		C42A510E2B86880A002CBA68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C42A51162B868835002CBA68 /* yourLocation.xlsr */ = {isa = PBXFileReference; lastKnownFileType = file; path = yourLocation.xlsr; sourceTree = "<group>"; };
+		C42A51172B868835002CBA68 /* citySearch.xlsr */ = {isa = PBXFileReference; lastKnownFileType = file; path = citySearch.xlsr; sourceTree = "<group>"; };
 		C43B139C2B82269B00AC3106 /* Icon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Icon.swift; sourceTree = "<group>"; };
 		C43B139E2B8248C400AC3106 /* Forecast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Forecast.swift; sourceTree = "<group>"; };
 		C43B13A02B82497600AC3106 /* DataRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataRequest.swift; sourceTree = "<group>"; };
@@ -53,6 +88,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		C42A51042B86880A002CBA68 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C42A510A2B86880A002CBA68 /* TVServices.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C4CE6C462B811A0F0013D422 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -63,6 +106,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C42A51082B86880A002CBA68 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C42A51092B86880A002CBA68 /* TVServices.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C42A510B2B86880A002CBA68 /* TopShelf */ = {
+			isa = PBXGroup;
+			children = (
+				C42A510C2B86880A002CBA68 /* ContentProvider.swift */,
+				C42A51172B868835002CBA68 /* citySearch.xlsr */,
+				C42A51162B868835002CBA68 /* yourLocation.xlsr */,
+				C42A510E2B86880A002CBA68 /* Info.plist */,
+			);
+			path = TopShelf;
+			sourceTree = "<group>";
+		};
 		C43B13A52B827FB000AC3106 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -105,6 +167,8 @@
 			isa = PBXGroup;
 			children = (
 				C4CE6C4B2B811A0F0013D422 /* weather-tvOS */,
+				C42A510B2B86880A002CBA68 /* TopShelf */,
+				C42A51082B86880A002CBA68 /* Frameworks */,
 				C4CE6C4A2B811A0F0013D422 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -113,6 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				C4CE6C492B811A0F0013D422 /* weather-tvOS.app */,
+				C42A51072B86880A002CBA68 /* TopShelf.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -149,6 +214,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		C42A51062B86880A002CBA68 /* TopShelf */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C42A51152B86880A002CBA68 /* Build configuration list for PBXNativeTarget "TopShelf" */;
+			buildPhases = (
+				C42A51032B86880A002CBA68 /* Sources */,
+				C42A51042B86880A002CBA68 /* Frameworks */,
+				C42A51052B86880A002CBA68 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TopShelf;
+			productName = TopShelf;
+			productReference = C42A51072B86880A002CBA68 /* TopShelf.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		C4CE6C482B811A0F0013D422 /* weather-tvOS */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C4CE6C5A2B811A100013D422 /* Build configuration list for PBXNativeTarget "weather-tvOS" */;
@@ -156,10 +238,12 @@
 				C4CE6C452B811A0F0013D422 /* Sources */,
 				C4CE6C462B811A0F0013D422 /* Frameworks */,
 				C4CE6C472B811A0F0013D422 /* Resources */,
+				C42A51122B86880A002CBA68 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				C42A51102B86880A002CBA68 /* PBXTargetDependency */,
 			);
 			name = "weather-tvOS";
 			productName = "weather-tvOS";
@@ -176,6 +260,9 @@
 				LastSwiftUpdateCheck = 1500;
 				LastUpgradeCheck = 1500;
 				TargetAttributes = {
+					C42A51062B86880A002CBA68 = {
+						CreatedOnToolsVersion = 15.0.1;
+					};
 					C4CE6C482B811A0F0013D422 = {
 						CreatedOnToolsVersion = 15.0.1;
 					};
@@ -195,11 +282,21 @@
 			projectRoot = "";
 			targets = (
 				C4CE6C482B811A0F0013D422 /* weather-tvOS */,
+				C42A51062B86880A002CBA68 /* TopShelf */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		C42A51052B86880A002CBA68 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C42A51182B868835002CBA68 /* yourLocation.xlsr in Resources */,
+				C42A51192B868835002CBA68 /* citySearch.xlsr in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C4CE6C472B811A0F0013D422 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -218,6 +315,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		C42A51032B86880A002CBA68 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C42A510D2B86880A002CBA68 /* ContentProvider.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C4CE6C452B811A0F0013D422 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -237,6 +342,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C42A51102B86880A002CBA68 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C42A51062B86880A002CBA68 /* TopShelf */;
+			targetProxy = C42A510F2B86880A002CBA68 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		C4CE6C502B811A0F0013D422 /* Main.storyboard */ = {
@@ -258,6 +371,56 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		C42A51132B86880A002CBA68 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4CX3G85ALP;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TopShelf/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = TopShelf;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "eyupmert.weather-tvOS.TopShelf";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+			};
+			name = Debug;
+		};
+		C42A51142B86880A002CBA68 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4CX3G85ALP;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TopShelf/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = TopShelf;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "eyupmert.weather-tvOS.TopShelf";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+			};
+			name = Release;
+		};
 		C4CE6C582B811A100013D422 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -380,6 +543,7 @@
 		C4CE6C5B2B811A100013D422 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -407,6 +571,7 @@
 		C4CE6C5C2B811A100013D422 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -434,6 +599,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		C42A51152B86880A002CBA68 /* Build configuration list for PBXNativeTarget "TopShelf" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C42A51132B86880A002CBA68 /* Debug */,
+				C42A51142B86880A002CBA68 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		C4CE6C442B811A0F0013D422 /* Build configuration list for PBXProject "weather-tvOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
